@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+todo_data.json
+build/
+dist/
+*.spec
