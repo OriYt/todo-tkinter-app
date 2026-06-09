@@ -40,6 +40,19 @@ to run; no Python installation is required on the target machine.
 > Note: a Windows `.exe` must be built on Windows (or via Wine). Building on
 > Linux/macOS produces an executable for that platform, not a Windows `.exe`.
 
+### Automated build via GitHub Actions (no Windows machine needed)
+
+This repo includes a workflow at `.github/workflows/build-windows.yml` that
+builds `ToDoList.exe` on a Windows runner.
+
+- On every push / pull request it builds the exe and uploads it as a build
+  artifact. Download it from the **Actions** tab → the workflow run →
+  **Artifacts** → `ToDoList-windows`.
+- Pushing a tag like `v1.0.0` additionally attaches `ToDoList.exe` to a
+  GitHub Release.
+- You can also trigger it manually from the **Actions** tab via
+  **Run workflow** (workflow_dispatch).
+
 ## Run on Linux / macOS
 
 ```
